@@ -35,7 +35,8 @@ public class TelaAbrirChamados extends javax.swing.JFrame {
         prioridadeTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Abertura de solicitação");
+        setTitle("Abertura de chamado");
+        setResizable(false);
 
         jLabel1.setText("Título:");
 
@@ -189,9 +190,7 @@ public class TelaAbrirChamados extends javax.swing.JFrame {
             dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
