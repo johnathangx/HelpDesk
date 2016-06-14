@@ -23,6 +23,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
+        setResizable(false);
 
         jLabel1.setText("Usuario:");
 
@@ -113,7 +114,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void LoginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_LoginTextFieldActionPerformed
 
 
