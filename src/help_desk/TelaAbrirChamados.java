@@ -35,7 +35,8 @@ public class TelaAbrirChamados extends javax.swing.JFrame {
         prioridadeTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Abertura de solicitação");
+        setTitle("Abertura de chamado");
+        setResizable(false);
 
         jLabel1.setText("Título:");
 
@@ -153,7 +154,12 @@ public class TelaAbrirChamados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try {
+        if(tituloTextField.getText().equals("") || originadorTextField.getText().equals("") || compromissoTextField.getText().equals("")
+                 || tipoTextField.getText().equals("") || prioridadeTextField.getText().equals("") || descricaoTextField.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Existem informações que não foram preenchidas, por favor verificar!");
+        }        
+        else{
+            try {
 
             Class.forName("com.mysql.jdbc.Driver");
             
@@ -182,6 +188,7 @@ public class TelaAbrirChamados extends javax.swing.JFrame {
         } catch (SQLException | ClassNotFoundException e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -189,9 +196,7 @@ public class TelaAbrirChamados extends javax.swing.JFrame {
             dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
