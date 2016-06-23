@@ -71,6 +71,7 @@ public class ChamadosEmAberto extends javax.swing.JFrame {
 
         resultado.setColumns(20);
         resultado.setRows(5);
+        resultado.setEnabled(false);
         jScrollPane2.setViewportView(resultado);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,7 +167,7 @@ public class ChamadosEmAberto extends javax.swing.JFrame {
                 String descricao = rs.getString("descricao");
                 String motivoRejeicao = rs.getString("motivoRejeicao");
 
-                resultado.append(numeroChamado+ " , "+titulo+ " , "+originador+ " , "+compromisso+ " , "+tipo+ " , "+prioridade+ " , "+descricao+ " "+motivoRejeicao+ "\n");
+                resultado.append("Numero do chamado: "+numeroChamado+ ", " +"Titulo: "+titulo+ ", " +"Originador: "+originador+ ", " +"Compromisso: "+compromisso+ ", " +"Tipo: "+tipo+ ", " +"Prioridade: "+prioridade+ ", " +"Descrição: "+descricao+ ", " +"Motivo da Rejeição: "+motivoRejeicao+ "\n");
             }
            
         } catch (SQLException | ClassNotFoundException e) {
@@ -181,6 +182,10 @@ public class ChamadosEmAberto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if(numeroChamadoTextField.getText().equals("") || SolucaoTextArea.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Numero do chamado ou solução não foram informados.");
+        } 
+        else{
         try {
 
             Class.forName("com.mysql.jdbc.Driver");
@@ -203,7 +208,8 @@ public class ChamadosEmAberto extends javax.swing.JFrame {
             dispose();
         } catch (SQLException | ClassNotFoundException e) {
             JOptionPane.showMessageDialog(rootPane, e);
-        }       
+        }      
+    }
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
