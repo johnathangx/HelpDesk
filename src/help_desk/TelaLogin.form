@@ -4,6 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="LOGIN"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -37,8 +38,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="LoginTextField" alignment="0" max="32767" attributes="0"/>
                   <Component id="SenhaTextField" max="32767" attributes="0"/>
+                  <Component id="LoginTextField" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -56,8 +57,8 @@
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="39" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="LoginTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LoginTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -85,11 +86,6 @@
         <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="LoginTextField">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginTextFieldActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JPasswordField" name="SenhaTextField">
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
@@ -112,6 +108,8 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="CANAL DE ATENDIMENTO HELP DESK"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="LoginTextField">
     </Component>
   </SubComponents>
 </Form>
